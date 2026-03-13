@@ -157,13 +157,10 @@ img {
 }
 
 .main__container-button {
-  padding: 0 27px 25px;
-}
-
-.main__container-button {
   display: flex;
   justify-content: end;
   gap: 12px;
+  padding: 0 27px 25px;
 }
 
 .main__container-button button {
