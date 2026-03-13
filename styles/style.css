@@ -108,11 +108,12 @@ img {
 
 .label__container {
   position: relative;
-  height: clamp(371px, 19vh + 200px, 696px);
+  height: 696px;
+  margin-bottom: 23px;
 }
 
 .label__container img {
-  height: clamp(371px, 19vh + 200px, 696px);
+  height: 696px;
 }
 
 .label-text {
@@ -145,37 +146,33 @@ img {
   margin-bottom: 5px;
   padding: 5px 10px;
   font-size: 18px;
-  /* line-height: 100%; */
   font-variation-settings: 'wght' var(--font-weight-heading-card);
 }
 
-.main__content-list {
-  display: grid;
-  gap: 25px;
-  padding: 25px;
-}
-
-.main__content-list-item {
+.main-content {
+  margin-bottom: 25px;
+  padding: 0 27px;
   font-size: 18px;
   line-height: 21px;
 }
 
-.main__content-list-item:last-child {
-  justify-self: end;
+.main__container-button {
+  padding: 0 27px 25px;
 }
 
-.main__content-button {
+.main__container-button {
   display: flex;
+  justify-content: end;
   gap: 12px;
 }
 
-.main__content-button button {
+.main__container-button button {
   border: none;
   padding: 0;
   background-color: var(--color-light);
 }
 
-.main__content-button .card__like-button {
+.main__container-button .card__like-button {
   position: relative;
   align-content: center;
   width: 130px;
@@ -205,6 +202,10 @@ img {
   font-weight: normal;
   font-size: 14px;
   line-height: 150%;
+}
+
+.button__text-uppercase {
+  text-transform: uppercase;
 }
 
 button {
@@ -241,7 +242,7 @@ button {
 }
 
 .dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.8);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .button-effects {
@@ -280,7 +281,9 @@ button {
 }
 
 .card__icon-button {
+  align-self: center;
   width: 38px;
+  height: 36px;
   transition: outline 0.3s ease;
 }
 
@@ -290,6 +293,7 @@ button {
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--color-dark);
+
 }
 
 .sparks {
@@ -356,8 +360,16 @@ button {
 }
 
 @media (width <= 376px) {
-  .main__content-list-item:not(:last-child) {
-    width: 321px;
+  .label__container {
+    height: 371px;
+  }
+
+  .label__container img {
+    height: 371px;
+  }
+
+  .main__container-button {
+    gap: 7px;
   }
 
   .button-dialog {
